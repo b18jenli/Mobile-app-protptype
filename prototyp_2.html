@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="prototyp.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://hammerjs.github.io/dist/hammer.min.js"></script>
+  <title>NEWS</title>
+
+
+  <script>
+  function myFunction() {
+    var x = document.getElementById("myLinks");
+    if (x.style.display === "block") {
+      x.style.display = "none";
+    } else {
+      x.style.display = "block";
+    }
+  }
+</script>
+<script>
+
+    function tap(event) {
+          if(event.target.className=="no-ellipsis"){
+            /* use elipsis */
+            event.target.className="with-ellipsis";
+          }else{
+            /* No elipsis */
+            event.target.className="no-ellipsis";
+          }
+    }
+
+    function init(){
+
+      // Get area where we listen for touch events
+      var toucharea = document.getElementById("textelement1");
+      // Set starting value for our textelement
+      toucharea.className="with-ellipsis";
+
+      // Init Hammer
+      var mc = new Hammer(toucharea);
+
+      // Listen for doubletap gesture
+      mc.on("doubletap", function (event){tap(event)});
+
+      // Get a second area where we listen for touch events
+      var toucharea2 = document.getElementById("textelement2");
+      // Set starting value for our textelement
+      toucharea2.className="with-ellipsis";
+
+      // Init second Hammer
+      var mc2 = new Hammer(toucharea2);
+
+      // Listen for doubletap gesture
+      mc2.on("doubletap", function (event){ tap(event)});
+    }
+
+
+    var element = getElementById("cirkel");
+element.addEventListener("click", function(){
+	// Your code
+});
+$("cirkel").click(function() {
+	// Your code
+});
+  </script>
+
+</head>
+<body onload="init();">
+  <div class="topnav">
+    <a href="prototyp_2.html" class="active">NEWS</a>
+    <div id="myLinks">
+      <a href="prototyp_3.html">GALLERY</a>
+      <a href="prototyp_4.html">ABOUT</a>
+    </div>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+
+  <h1>NEWS</h1>
+  <div class="row">
+
+    <div class="col-1 col-md-3 col-lg-3">
+    </div>
+
+    <div class="col-10 col-md-6 col-lg-6">
+
+      <div class="card-group">
+    <div class="card">
+      <img src="images/fashion_fyrkant.jpg" class="card-img-top" alt="...">
+
+      <div class="card-body">
+        <h3 class="card-title">Spring trends</h3>
+        <p class="card-text">
+      <p id="textelement1" class="with-ellipsis">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+      </div>
+    </div>
+  </div>
+
+
+  <a href="prototyp_5.html"target="_self">
+    <svg width="100%" viewBox="0 0 300 100" style="border:0px dashed green;">
+    <g id="cirkel">
+  <circle fill="#e0f2f1" fill-rule="evenodd" stroke="#f44336" stroke-width="0" clip-rule="evenodd" cx="0" cy="0" r="40" />
+  <g id="bokstav">
+    <rect id="rs1" x="-8" y="2" width="12" height="25" fill="#f44336" />
+    <rect id="rs2" x="-11" y="-24" width="12" height="25" fill="#f44336" />
+    <rect id="rs3" x="-2" y="-21" width="8" height="24" fill="#f44336" />
+
+    <rect id="r1" x="-4" y="2" width="12" height="25" fill="black" />
+    <rect id="r2" x="-7" y="-22" width="12" height="24" fill="black" />
+    <rect id="r3" x="2" y="-24" width="6" height="26" fill="black" />
+    </g>
+</g>
+</svg>
+</a>
+
+
+
+<div class="card-group">
+<div class="card">
+      <img src="images/fashion_fyrkant.jpg" class="card-img" alt="...">
+      <div class="card-body">
+        <h3 class="card-title">New Collections</h3>
+        <p class="card-text">
+          <p id="textelement2" class="with-ellipsis">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+      </div>
+    </div>
+    </div>
+
+  </div>
+    <div class="col-1 col-md-3 col-lg-3">
+    </div>
+  </div>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>

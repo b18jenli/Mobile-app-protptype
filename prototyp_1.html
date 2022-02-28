@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="prototyp.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Homemade+Apple" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://hammerjs.github.io/dist/hammer.min.js"></script>
+  <script src="https://cdn.rawgit.com/HGustavs/Shaker.js/master/shaker.js"></script>
+  <title>YADA</title>
+
+</head>
+<script>
+function tap(event) {
+      if(event.target.className=="no-ellipsis"){
+        /* use elipsis */
+        event.target.className="with-ellipsis";
+      }else{
+        /* No elipsis */
+        event.target.className="no-ellipsis";
+      }
+}
+
+    </script>
+    <script>
+    var i = 0;
+    shaker.on("step", function(o) {
+        i++
+
+
+        var element = document.getElementById("content");
+
+        if (element.className == "sideA") {
+
+            element.className = "sideB";
+
+        }
+        if (i >= 5) {
+            location.href = "http://wwwlab.iit.his.se/b18jenli/mobilappdesign/Mobilapp_prototyp/prototyp_2.html";
+
+        } else {
+
+            element.className = "sideA";
+
+        }
+
+
+    });
+
+
+</script>
+
+  <body >
+    <body onload="init();">
+      <div class="topnav">
+        <a href="prototyp_1.html" class="active">YADA</a>
+        <div id="myLinks">
+          <a href="prototyp_2.html">NEWS</a>
+          <a href="prototyp_3.html">GALLERY</a>
+          <a href="prototyp_4.html">ABOUT</a>
+        </div>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
+
+<div class="container">
+<div id="content" class="sideA">
+  <div class="row">
+    <div class="col-0 col-md-3 col-lg-3">
+    </div>
+    <div class="col-12 col-md-6 col-lg-6">
+      <figure>
+        <img src="images/fashion_start.jpg" class="img-fluid" alt="Responsive image">
+        <h1 class="rubrik1">YADA <br>fashion</h1>
+        <p>Shake to <br>continue!</p>
+        <figcaption><a href="https://www.flickr.com/photos/iqremix/33602275460/in/photolist-TcjrNU-bzGarw-kjDoyN-9kUEXf-THGf7j-bNAPeX-bNAEbM-VAbKSU-SuQrdL-9kEaVD-THGd6W-VE9zaF-n7FQcp-pjpABo-Ts4Jyn-pmqz7w-cesz7C-oYJ3K7-XZMw3L-TfDgNP-8572dX-UggsR1-9kEbRg-Txs7Cf-bzGa5C-UyoGUh-TnwkYE-bX6dJr-bzG5af-bNAP8e-URtd8K-dQNjJf-9kFiHq-Ts4Lvt-bX5MvR-dSLBVQ-p4XzNY-TzWD7H-SaynnL-9kHeUy-9kEbAP-SS5hQf-oJNNuu-cXSCUy-Tcjrso-URtez2-VAeymw-Txs8Xj-cenbjU-dQFZin" target="_blank">Licens CC BY-SA 2.0</a></figcaption>
+      </figure>
+        </div>
+    <div class="col-0 col-md-3 col-lg-3">
+    </div>
+      </div>
+      </div>
+  </div>
+
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
